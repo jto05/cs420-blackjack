@@ -1,1 +1,46 @@
 #include "../headers/card.h"
+
+Card::Card( Suit suit, Rank rank, bool isFaceUp ) {
+  this->suit = suit;
+  this->rank = rank;
+  this->isFaceUp = isFaceUp;
+}
+
+int Card::getValue() {
+
+  if (!isFaceUp) return 0;
+
+  switch ( rank ) {
+    case ACE: 
+      return 1;
+    case TWO:
+      return 2;
+    case THREE: 
+      return 3;
+    case FOUR:
+      return 4;
+    case FIVE: 
+      return 5;
+    case SIX:
+      return 6;
+    case SEVEN: 
+      return 7;
+    case EIGHT:
+      return 8;
+    case NINE:
+      return 9;
+    case TEN: 
+      return 10;
+    case JACK:
+      return 10;
+    case QUEEN: 
+      return 10;
+    case KING:
+      return 10;
+  }
+  return 0; // unreachable code
+}
+
+void Card::flip() {
+  this->isFaceUp = !isFaceUp;
+}
