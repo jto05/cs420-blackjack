@@ -1,6 +1,6 @@
 #include "../headers/card.h"
 
-Card::Card( Suit suit, Rank rank, bool isFaceUp ) {
+Card::Card( SUIT suit, RANK rank, bool isFaceUp ) {
   this->suit = suit;
   this->rank = rank;
   this->isFaceUp = isFaceUp;
