@@ -26,9 +26,11 @@ enum Suit {
 
 
 class Card {
-private:
+protected:
   Rank rank;
   Suit suit;
+
+private:
   bool isFaceUp;
 
 public:
