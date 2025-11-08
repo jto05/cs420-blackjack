@@ -12,7 +12,7 @@ public:
   GenericPlayer(std::string name);
   virtual ~GenericPlayer();
 
-  bool virtual isHitting();
+  bool virtual isHitting() = 0;
   bool isBusted();
   bool bust();
   std::string getName();

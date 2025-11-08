@@ -10,10 +10,6 @@ GenericPlayer::GenericPlayer(std::string name) {
 GenericPlayer::~GenericPlayer() {
 }
 
-bool GenericPlayer::isHitting() {
-  return false;
-}
-
 
 bool GenericPlayer::isBusted() {
   int total = getTotal();
