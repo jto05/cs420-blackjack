@@ -9,7 +9,7 @@ class House : public GenericPlayer {
 public:
   House( std::string = "Dealer" );
   virtual ~House();
-  bool virtual isHitting();
+  bool isHitting() override;
   void flipFirstCard();
 };
 

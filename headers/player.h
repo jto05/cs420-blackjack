@@ -8,7 +8,7 @@ class Player : public GenericPlayer {
 public:
   Player(std::string = " "); 
   virtual ~Player();
-  bool virtual isHitting();
+  bool isHitting() override;
   bool win();
   bool lose();
   bool push();
