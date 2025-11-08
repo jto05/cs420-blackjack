@@ -36,7 +36,8 @@ public:
   Card( SUIT suit, RANK rank, bool isFaceUp );
   int getValue();
   void flip();
-  friend std::ostream& operator<<(std::ostream& os, const Card& card);
+
+  friend std::ostream& operator<<(std::ostream& os, Card& card);
 
 protected:
   RANK rank;

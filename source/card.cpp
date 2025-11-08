@@ -1,5 +1,7 @@
 #include "../headers/card.h"
 
+#include <iostream>
+
 Card::Card( SUIT suit, RANK rank, bool isFaceUp ) {
   this->suit = suit;
   this->rank = rank;
@@ -43,4 +45,43 @@ int Card::getValue() {
 
 void Card::flip() {
   this->isFaceUp = !isFaceUp;
+}
+
+
+std::ostream& operator<<(std::ostream& os, Card& card) {
+
+  std::string ranks[13] = {
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  };
+
+  std::string suits[4] = {
+    "C",
+    "D",
+    "H",
+    "S",
+
+  };
+
+  if ( card.getValue() == 0 ) {
+    os << "XX";
+  }
+
+  else {
+    os << ranks[card.rank] << suits[card.suit];
+  }
+
+  return os;
+
 }

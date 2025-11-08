@@ -17,7 +17,8 @@ public:
   bool bust();
   std::string getName();
   void setName(std::string name);
-  friend std::ostream& operator<<(std::ostream& os, const GenericPlayer& card);
+
+  friend std::ostream& operator<<(std::ostream& os, GenericPlayer& gp);
 };
 
 #endif

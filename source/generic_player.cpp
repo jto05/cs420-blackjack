@@ -28,3 +28,20 @@ std::string GenericPlayer::getName() {
 void GenericPlayer::setName(std::string name) {
   this->name = name;
 }
+
+std::ostream& operator<<(std::ostream& os, GenericPlayer& gp) {
+  os << gp.getName() << "\t";
+
+  if ( gp.cards.empty() ) {
+    os << "<empty>";
+    return os;
+  }
+
+  for ( Card* c : gp.cards ) {
+    os << *c << "\t";
+  }
+
+  os << "(" << gp.getTotal() << ")";
+  return os;
+
+}
