@@ -5,7 +5,7 @@ CXX=g++
 
 CXXFLAGS=-std=c++11 -Wall -g3 -c
 
-OBJS = card.o hand.o deck.o generic_player.o player.o house.o game.o main.o
+OBJS = card.o hand.o deck.o generic_player.o player.o house.o game.o 
 
 PROGRAM = blackjack
 

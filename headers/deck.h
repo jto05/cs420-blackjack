@@ -11,7 +11,7 @@ public:
   virtual ~Deck();
   void populate();
   void shuffle();
-  void deal( Hand );
+  void deal( Hand& );
   void additionalCards( GenericPlayer& );
 };
 

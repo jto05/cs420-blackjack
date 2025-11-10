@@ -2,6 +2,7 @@
 #include "../headers/generic_player.h"
 
 #include <iostream>
+#include <cctype>
 
 Player::Player(std::string name) : GenericPlayer(name) {
 }
@@ -17,9 +18,10 @@ bool Player::isHitting() {
   while ( true ) {
     cout << getName() << ", would you like to hit? (Y/N)" << endl;
 
-    cin >> input;
+    cin.clear();
+    cin >> ws >> input;
 
-    switch ( input ){
+    switch ( std::toupper(input) ){
     case 'Y':
       return true;
     case 'N':

@@ -25,9 +25,14 @@ int Hand::getTotal() {
   if ( cards[0]->getValue() == 0 ) return 0;
 
   int total = 0;
+  bool hasAce = false;
   for ( Card* c : cards ) {
     total += c->getValue();
+    if ( c->getValue() == 1 ) hasAce = true;
   }
+
+  if ( hasAce && total <= 11 ) 
+    total += 10;
 
   return total;
 }

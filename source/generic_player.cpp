@@ -13,7 +13,7 @@ GenericPlayer::~GenericPlayer() {
 
 bool GenericPlayer::isBusted() {
   int total = getTotal();
-  return ( total < 21 );
+  return ( total > 21 );
 }
 
 bool GenericPlayer::bust() {
